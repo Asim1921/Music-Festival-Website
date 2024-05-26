@@ -1,0 +1,129 @@
+/* Body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #f7cac9, #92a8d1);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Main heading styling */
+h1 {
+    margin-top: 20px;
+    font-size: 2.5em;
+    margin-left: 100px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Container for FAQs */
+.faq-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Individual FAQ styling */
+.faq {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    padding: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.faq:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Active FAQ styling */
+.faq.active {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* FAQ title styling */
+.faq-title {
+    margin: 0;
+    font-size: 1.4em;
+    display: inline-block;
+    width: calc(100% - 40px);
+    color: #ff6f61;
+}
+
+/* FAQ text styling */
+.faq-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Active FAQ text styling */
+.faq.active .faq-text {
+    max-height: 200px;
+}
+
+/* FAQ toggle button styling */
+.faq-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff6f61;
+}
+
+.faq-toggle i.fa-times {
+    display: none;
+}
+
+.faq.active .faq-toggle i.fa-times {
+    display: inline;
+}
+
+.faq.active .faq-toggle i.fa-chevron-down {
+    display: none;
+}
+
+/* Adding some animation for fun */
+@keyframes faqSlideDown {
+    0% {
+        max-height: 0;
+    }
+    100% {
+        max-height: 200px;
+    }
+}
+
+@keyframes faqSlideUp {
+    0% {
+        max-height: 200px;
+    }
+    100% {
+        max-height: 0;
+    }
+}
+
+.faq.active .faq-text {
+    animation: faqSlideDown 0.3s ease;
+}
+
+.faq .faq-text {
+    animation: faqSlideUp 0.3s ease;
+}
+

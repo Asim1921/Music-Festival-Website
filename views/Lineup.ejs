@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lineup | Music Festival</title>
+    <link rel="stylesheet" href="/css/lineup.css">
+</head>
+<body>
+    <h1>Festival Lineup</h1>
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search for acts...">
+    </div>
+    <div id="results" class="lineup-container">
+        < lineup.forEach(artist => { %>
+            <div class="artist">
+                <img src="<%= artist.image %>" alt="<%= artist.name %>">
+                <h5>Artist <%= artist.id %></h5>
+                <h3><%= artist.name %></h3>
+                <p>Time: <%= artist.time %></p>
+            </div>
+        <% }) %>
+    </div>
+    <script src="/js/lineup.js"></script>
+</body>
+</html>

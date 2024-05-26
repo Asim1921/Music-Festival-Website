@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Contact Us | Music Festival</title>
+  <link rel="stylesheet" href="/css/styles.css" >
+</head>
+<body>
+  <div class="contact-container">
+    <div class="contact-inner-container">
+      <div class="contact-info-container">
+        <h1 class="contact-heading">Get in Touch!</h1>
+        <p class="contact-description">
+          We're here to answer your questions about the festival. Feel free to
+          reach out!
+        </p>
+        <div class="line"></div>
+
+        <div class="contact-details">
+          <h3><i class="fa fa-map-marker"></i> Festival Location</h3>
+          <p>123 Music Lane, Festival City, USA-456789</p>
+        </div>
+        <hr >
+
+        <div class="contact-details">
+          <h3><i class="fa fa-envelope"></i> Email Us</h3>
+          <p>info@musicfestival.com</p>
+        </div>
+        <hr >
+
+        <div class="contact-details">
+          <h3><i class="fa fa-phone"></i> Call Us</h3>
+          <p>+1 800 123 4567</p>
+        </div>
+        <hr >
+
+        <div class="social-link-container">
+          <a href="https://instagram.com" class="fa fa-instagram"></a>
+          <a href="https://facebook.com" class="fa fa-facebook"></a>
+          <a href="https://twitter.com" class="fa fa-twitter"></a>
+          <a href="https://linkedin.com" class="fa fa-linkedin"></a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form class="form" id="contact-form" action="/contact" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" class="input-field form-input" placeholder="Your Name" required >
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" class="input-field form-input" placeholder="Your Email" required >
+          </div>
+          <div class="form-group">
+            <textarea name="message" rows="5" class="input-field form-input" placeholder="Your Message"
+              required></textarea>
+          </div>
+          <div class="form-group">
+            <input type="submit" class="input-field submit-btn" value="Send Message" >
+          </div>
+        </form>
+        <div id="response-message"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="/js/script.js"></script>
+  
+</body>
+</html>

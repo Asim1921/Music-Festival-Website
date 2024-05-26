@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stages | Music Festival</title>
+    <link rel="stylesheet" href="/css/stages.css">
+</head>
+<body>
+    <h1>Festival Stages</h1>
+    <div class="stage-selection">
+        <label for="stage-select">Choose a stage:</label>
+        <select id="stage-select">
+            <% stages.forEach(stage => { %>
+                <option value="<%= stage.id %>"><%= stage.name %></option>
+            <% }) %>
+        </select>
+    </div>
+    <div id="stage-info" class="stages-container">
+        <% stages.forEach(stage => { %>
+            <div class="stage">
+                <img src="<%= stage.image %>" alt="<%= stage.name %>">
+                <h3><%= stage.name %></h3>
+                <p><%= stage.description %></p>
+            </div>
+        <% }) %>
+    </div>
+    <script src="/js/stages.js"></script>
+</body>
+</html>
