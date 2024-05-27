@@ -24,14 +24,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Handle stage selection change
-    document.getElementById('stage-select').addEventListener('change', function() {
-        let stageId = this.value;
+    // Handle search input
+    document.getElementById('search').addEventListener('input', function() {
+        let query = this.value;
         let xhr = new XMLHttpRequest();
-        xhr.open('GET', `/stage-info?id=${stageId}`, true);
+        xhr.open('GET', `/stage-search?q=${query}`, true);
         xhr.onload = function() {
             if (this.status === 200) {
-                document.getElementById('stage-info').innerHTML = this.responseText;
+                document.getElementById('results').innerHTML = this.responseText;
+            } else {
+                document.getElementById('results').innerHTML = ''; // Clear results if no match
             }
         };
         xhr.send();

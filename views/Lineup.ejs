@@ -12,14 +12,14 @@
         <input type="text" id="search" placeholder="Search for acts...">
     </div>
     <div id="results" class="lineup-container">
-        < lineup.forEach(artist => { %>
+        <% lineup.forEach(artist => { %>
             <div class="artist">
                 <img src="<%= artist.image %>" alt="<%= artist.name %>">
                 <h5>Artist <%= artist.id %></h5>
                 <h3><%= artist.name %></h3>
                 <p>Time: <%= artist.time %></p>
             </div>
-        <% }) %>
+        <% }); %>
     </div>
     <script src="/js/lineup.js"></script>
 </body>
